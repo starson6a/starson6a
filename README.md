@@ -60,27 +60,6 @@
   <img src="https://raw.githubusercontent.com/starson6a/starson6a/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </p>
 
-> name: Generate Snake
-on:
-  schedule:
-    - cron: "0 */6 * * *"
-  push:
-    branches: [main]
-  workflow_dispatch: {}
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: starson6a
-          outputs: dist/github-contribution-grid-snake.svg
-      - uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ---
 
 ### 🤝 Connect With Me
